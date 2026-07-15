@@ -1,0 +1,23 @@
+{
+  "scanner": "jfrog-xray",
+  "scanned_at": "2026-07-15T09:00:00Z",
+  "project": "vulnerable-ts-app-protobufjs",
+  "findings": [
+    {
+      "id": "XRAY-CVE-2022-25878",
+      "cve": "CVE-2022-25878",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "package": "protobufjs",
+      "ecosystem": "npm",
+      "current_version": "6.11.2",
+      "vulnerable_range": "<6.11.3",
+      "fixed_range": ">=6.11.3",
+      "recommended_version": "6.11.4",
+      "summary": "protobufjs util.setProperty is missing prototype-key checks, enabling prototype pollution.",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2022-25878"
+      ]
+    }
+  ]
+}
