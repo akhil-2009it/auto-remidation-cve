@@ -183,7 +183,7 @@ def ask_claude(finding: Finding, conflict: Optional[ConflictInfo], log: Callable
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
         raise RuntimeError("ANTHROPIC_API_KEY not set. Copy .env.example -> .env.")
-    model = os.environ.get("ANTHROPIC_MODEL", "claude-opus-4-8")
+    model = os.environ.get("ANTHROPIC_MODEL", "claude-opus-4-7")
     client = Anthropic(api_key=api_key)
 
     user_payload = {
