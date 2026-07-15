@@ -1,0 +1,15 @@
+{
+  "name": "vulnerable-ts-app-json5",
+  "version": "1.0.0",
+  "description": "Intentionally vulnerable TS app: CVE-2022-46175 in json5",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "json5": "2.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}
