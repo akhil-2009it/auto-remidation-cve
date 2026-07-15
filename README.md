@@ -90,6 +90,26 @@ The model returns a strict JSON object; ambiguous outcomes set `requires_human: 
 
 ---
 
+## Multi-CVE test harness (`fix-tool/introduce_cves.py`)
+
+Creates 5 branches on GitHub, each introducing ONE CVSS 9.8 CVE in a minimal TypeScript app:
+
+| Branch | CVE | Package |
+|---|---|---|
+| `cve/cve-2021-3918-json-schema` | CVE-2021-3918 | json-schema@0.2.3 |
+| `cve/cve-2022-46175-json5` | CVE-2022-46175 | json5@2.2.0 |
+| `cve/cve-2022-25878-protobufjs` | CVE-2022-25878 | protobufjs@6.11.2 |
+| `cve/cve-2021-44906-minimist` | CVE-2021-44906 | minimist@1.2.5 |
+| `cve/cve-2022-37601-loader-utils` | CVE-2022-37601 | loader-utils@2.0.2 |
+
+```bash
+python fix-tool/introduce_cves.py
+```
+
+Each branch adds a fresh `vulnerable-ts-app-<pkg>/` with `package.json` + `src/index.ts` (vulnerable code path) + `xray-report.json`. Push happens automatically; open the 5 PRs manually via the printed compare URLs.
+
+Follow-up run of the remediation harness against each `vulnerable-ts-app-<pkg>/` produces a matching `fix/*` PR that bumps to the fixed version — clean per-CVE audit trail.
+
 ## Security
 
 - **Never commit `fix-tool/.env`.** It's gitignored. Rotate any key you paste into chat.
