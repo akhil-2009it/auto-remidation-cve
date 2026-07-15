@@ -1,0 +1,13 @@
+{
+  "name": "vulnerable-rn-app",
+  "version": "1.0.0",
+  "description": "Demo RN app with intentional CVE-2023-45857 (axios SSRF) + peer conflict",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "dependencies": {
+    "axios": "0.21.1",
+    "react-native-svg-charts": "5.4.0"
+  }
+}

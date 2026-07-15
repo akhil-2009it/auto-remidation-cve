@@ -1,0 +1,24 @@
+{
+  "scanner": "jfrog-xray",
+  "scanned_at": "2026-07-15T09:00:00Z",
+  "project": "vulnerable-rn-app",
+  "findings": [
+    {
+      "id": "XRAY-001",
+      "cve": "CVE-2023-45857",
+      "severity": "HIGH",
+      "cvss": 6.5,
+      "package": "axios",
+      "ecosystem": "npm",
+      "current_version": "0.21.1",
+      "vulnerable_range": "<1.6.0",
+      "fixed_range": ">=1.6.0",
+      "recommended_version": "1.6.7",
+      "summary": "axios cross-origin redirect leaks Authorization header (SSRF-adjacent).",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-45857",
+        "https://github.com/axios/axios/security/advisories/GHSA-wf5p-g6vw-rhxx"
+      ]
+    }
+  ]
+}
