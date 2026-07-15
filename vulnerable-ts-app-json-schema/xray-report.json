@@ -1,0 +1,23 @@
+{
+  "scanner": "jfrog-xray",
+  "scanned_at": "2026-07-15T09:00:00Z",
+  "project": "vulnerable-ts-app-json-schema",
+  "findings": [
+    {
+      "id": "XRAY-CVE-2021-3918",
+      "cve": "CVE-2021-3918",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "package": "json-schema",
+      "ecosystem": "npm",
+      "current_version": "0.2.3",
+      "vulnerable_range": "<0.4.0",
+      "fixed_range": ">=0.4.0",
+      "recommended_version": "0.4.0",
+      "summary": "Prototype pollution in json-schema allows arbitrary Object.prototype writes via a crafted schema.",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2021-3918"
+      ]
+    }
+  ]
+}

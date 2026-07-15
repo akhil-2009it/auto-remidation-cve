@@ -1,0 +1,15 @@
+{
+  "name": "vulnerable-ts-app-json-schema",
+  "version": "1.0.0",
+  "description": "Intentionally vulnerable TS app: CVE-2021-3918 in json-schema",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "json-schema": "0.2.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}
