@@ -1,0 +1,23 @@
+{
+  "scanner": "jfrog-xray",
+  "scanned_at": "2026-07-15T09:00:00Z",
+  "project": "vulnerable-ts-app-loader-utils",
+  "findings": [
+    {
+      "id": "XRAY-CVE-2022-37601",
+      "cve": "CVE-2022-37601",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "package": "loader-utils",
+      "ecosystem": "npm",
+      "current_version": "2.0.2",
+      "vulnerable_range": "<2.0.3",
+      "fixed_range": ">=2.0.3",
+      "recommended_version": "2.0.4",
+      "summary": "loader-utils parseQuery is vulnerable to prototype pollution via crafted url query strings.",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2022-37601"
+      ]
+    }
+  ]
+}
